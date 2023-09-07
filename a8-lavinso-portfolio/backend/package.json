@@ -1,0 +1,19 @@
+{
+  "name": "roses-backend",
+  "version": "2023",
+  "description": "A catalog of favorite roses, including color, fragarence rating, and date introduced",
+  "main": "roses-controller.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon roses-controller.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "rest": "^2.0.0"
+  }
+}

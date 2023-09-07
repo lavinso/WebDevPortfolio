@@ -1,0 +1,106 @@
+### CREATE five documents.
+POST http://localhost:3000/roses HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Munstead Wood",
+    "color": "Deep Red",
+    "fragrance": 5,
+    "breeder": "David Austin",
+    "type": "English Shrub Rose",
+    "year": 2007,
+    "date": "2023-08-08"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/roses HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Golden Celebration",
+    "color": "Rich Golden Yellow",
+    "fragrance": 4,
+    "breeder": "David Austin",
+    "type": "English Shrub Rose",
+    "year": 1992,
+    "date": "2023-08-01"
+}
+
+### CREATE 3
+POST http://localhost:3000/roses HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Leonardo da Vinci",
+    "color": "Bubblegum Pink",
+    "fragrance": 2,
+    "breeder": "Meilland",
+    "type": "Floribunda",
+    "year": 1997,
+    "date": "2023-07-01"
+}
+
+### CREATE 4
+POST http://localhost:3000/roses HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Dylan Rose",
+    "color": "Delicate Pastel Pink",
+    "fragrance": 1,
+    "breeder": "Jalbert",
+    "type": "Floribunda",
+    "year": 2016,
+    "date": "2023-06-01"
+}
+
+### CREATE 5
+POST http://localhost:3000/roses HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bolero",
+    "color": "White with Light Pink Edges",
+    "fragrance": 5,
+    "breeder": "Meilland",
+    "type": "Floribunda",
+    "year": 2005,
+    "date": "2023-04-01"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/roses HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/roses/64d12ee33f28705278fd5e8b HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/roses/64d12ee33f28705278fd5e8b HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bolero",
+    "color": "White with Light Pink Edges",
+    "fragrance": 5,
+    "breeder": "Meilland",
+    "type": "Floribunda",
+    "year": 2004,
+    "date": "06/10/2023"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/roses/64d12ee33f28705278fd5e8b HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/roses HTTP/1.1
+

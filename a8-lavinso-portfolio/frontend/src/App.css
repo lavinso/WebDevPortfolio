@@ -1,0 +1,473 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+ /*Add fonts from the app's server */ 
+
+/*@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins&display=swap');*/
+ 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;800&display=swap');
+  
+/*@import 'node_modules/modern-normalize/modern-normalize.css';*/
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+/*   ----- Variables  -----  */
+:root {
+  --citrusorange:#ff6633; 
+  --greenturquoise:#339999;
+  --greenturquoise70:#33999970; 
+  --greenturquoise50: #33999950;
+  --dovegrey:#dad2d2;
+  --dovegrey90:#dad2d290; 
+  --deepgreen:#003333; 
+  --navy:#1b2236;
+  --alphachannelnavy: rgba(27, 34, 54, 0.8);
+  --cameltan:#dabfac; 
+  --pastelyellow:#ffe08d;
+  --pastelyellow80: #ffe08d80;
+  --whitegreen: #f1f7eb;
+ /* --custom-embellishment-name:;*/
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  background-color:var(--dovegrey90);
+  color:var(--navy); 
+  background-attachment:fixed;
+  background-image: url('images/background_with_color_lego_starry_night copy.jpeg');
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-size:cover; 
+  margin: 2%;  
+  padding: 2%;
+  max-width: 100%;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  background-color:var(--pastelyellow);
+  border-radius:5px 5px 5px 5px;
+  margin-bottom: 4%;
+  padding:1%;
+  font-size:200%;
+  text-align:center;
+}
+header img {
+  width:150px; 
+}
+main {
+  display:block;
+  background-color: var(--dovegrey90);
+  border-radius:5px 5px 5px 5px;
+  margin:0; /*40px;*/
+  padding:4%; 
+  /*min-height: 900 px;*/
+}
+section {
+  display:block;
+  background-color:var(--dovegrey);
+  border-radius:5px 5px 5px 5px;
+  padding: 2%;
+}
+article {
+  display:block;
+  background-color:var(--whitegreen);
+  border-radius:5px 5px 5px 5px;
+  margin:0px 30px 30px 30px;
+  padding-left:4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  text-align:justify;
+}
+
+/*#topic1 {}*/
+/*#topic2 {}*/
+/*div {}*/
+/*aside {}*/
+footer {
+  background-color:var(--pastelyellow);
+  padding:1%;
+  margin-top: 4%;
+  border-radius:5px 5px 5px 5px;
+  text-align:left;
+  font-size:0.8em; 
+}
+
+/* ----- Anchors ----- Text links */
+/*a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}*/
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  display:flex;
+  justify-content:center;
+  align-items: stretch ;
+  flex-wrap: wrap ;
+  flex-direction: row;
+  text-align:center;
+  background-color:var(--dovegrey90);
+  border-radius:5px 5px 5px 5px;
+  color:var(--whitegreen);
+  font-size: 1.2em;
+  font-weight:bold;
+  margin-bottom:1%;
+  padding:1%;
+  text-decoration:none;
+}
+nav a {
+  background-color:var(--navy);
+  border:2px var(--whitegreen);
+  border-radius:5px 5px 5px 5px; 
+  color:var(--whitegreen);
+  font-size:1.2em;
+  font-weight:bold;
+  margin: 0.5%;
+  padding: 1.5%;
+  text-decoration:none;
+}
+nav a:hover {
+  background-color:var(--whitegreen);
+  color:var(--navy);
+}
+nav.local { 
+  display:flex;
+  justify-content:center;
+  align-items: stretch ;
+  flex-wrap: wrap ;
+  flex-direction: row;
+  text-align:center;
+  background-color:var(--dovegrey);
+  border-radius:5px 5px 5px 5px;
+  color:var(--greenturquoise);
+  font-size: 1em;
+  font-weight:bold;
+  margin-bottom:1%;
+  padding:1%;
+  text-decoration:none;
+
+}
+nav.local a {
+  background-color:var(--pastelyellow);
+  border:2px var(--pastelyellow);
+  border-radius:5px 5px 5px 5px; 
+  color:var(--greenturquoise);
+  font-size:1 em;
+  font-weight:bold;
+  margin: 0.5%;
+  padding: 1.5%;
+  text-decoration:none;
+
+}
+nav.local a:hover {
+  background-color:var(--greenturquoise);
+  color:var(--pastelyellow);
+
+}
+/*  -----  Typography  ----- */
+/*p {}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}*/
+
+h1, h2, h3, h4, h5, h6 {
+  color:var(--greenturquoise); 
+  font-family:'Playfair Display', serif;
+} 
+
+h1 {
+  font-size: 250%; 
+  margin: 0; 
+  padding-top: 1%;
+  padding-bottom: 2%; 
+  /*text-shadow: 3px 3px 4px #003333*/
+}
+h2 {
+  font-size: 200%; 
+  margin: 0; 
+  padding-top: 2%;
+  padding-bottom: 2%;
+  white-space: normal;
+}
+h3 {
+  font-size: 150%; 
+  margin: 0; 
+  padding-top: 2%;
+  white-space: normal;
+}
+/*h4 {}
+h5 {}
+h6 {}
+*/
+
+/*abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}*/
+
+/*  ----- Coding or instructional typography ----- */
+/*pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}*/
+
+/*  ----- Table ----- */
+/*table {
+  padding: 2%;
+  margin:2%;
+  background-color: var(--dovegrey90);
+  color: var(--navy);
+  border:2px var(--greenturquoise);
+  border-radius:5px 5px 5px 5px; 
+  border-collapse: collapse;
+  display:inline-block;
+
+}
+*/
+
+html {
+  height: 100%;
+  width: 100%;
+}
+table {
+  border-collapse:collapse;
+  width:100%;
+}
+tr th, 
+tr td {
+  border:1px dashed var(--greenturquoise);
+  padding:10px;
+}
+caption {
+  padding: 3%;
+  text-align:center;
+}
+/*
+tr th, tr td {
+  padding: 30px;
+  padding-bottom: 0;
+}
+*/
+.numberData {
+  text-align: right;
+}
+
+
+/*
+tbody {}
+thead {}
+tfoot {}
+tr {}
+  tr:nth-child(even) {}
+th {}
+td {}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}*/
+
+
+/*  ----- Form ----- */
+form, button, input, select, textarea {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  color:var(--navy);
+  padding:3%
+}
+
+fieldset {
+  margin-bottom: 5%;
+  border: 3px double var(--greenturquoise);
+  background-color: (var(--whitegreen));
+  border-radius:5px 5px 5px 5px;
+  margin-bottom: 5%;
+  padding:2%;
+  
+}
+legend {
+    font-weight:bold;
+    color:var(--navy);
+    margin-bottom: 1%;
+    font-size: 130%;
+}
+label {
+  display: block;
+  margin-top: 4%;
+  margin-bottom: 0.5%;
+  font-size: 85%;
+}
+label input[type="checkbox"], 
+label input[type="radio"] {
+  width: 5%;
+  display: inline; /*!important;*/
+  margin:1%;
+  padding: 1%;
+}
+input[type=checkbox]:checked + label {
+  color:var(--greenturquoise);
+  font-style: bold;
+  font-size: 150%;
+} 
+input[type=radio]:checked + label {
+  color:var(--greenturquoise);
+  font-style: bold;
+  font-size: 150%;
+} 
+button {
+  background-color: var(--pastelyellow);
+  color: var(--greenturquoise);
+  margin-top: 5%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 120%;
+  font-weight: bold;
+}
+input {
+  width: 90%;
+  padding:1%;
+  font-size: 110%;
+}
+input::placeholder {
+  color:var(--greenturquoise);
+}
+  /*output {}
+  meter {}
+  progress {}*/
+select {
+  width: 50%;
+  padding: 2%;
+}
+  /*optgroup {}
+  option {}*/
+textarea {
+  width: 90%;
+  height: 10%;
+  padding: 1%;
+  font-size: 110%;
+}
+textarea::placeholder {
+  color: var(--greenturquoise);
+}
+:focus{
+  background-color:var(--pastelyellow80);
+}
+:required {
+  border:2px solid var(--greenturquoise);
+}
+label.required:after {
+  content:" *";
+  color:var(--greenturquoise);
+}
+select.typedropdown{
+  width:80px;
+}
+
+
+/* ----- Media ----- */
+/*figure {}
+  figcaption {}
+  figure img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}*/
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.gallery { 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /*align-items: center;*/
+}
+.gallery figure {
+  width: 320px;
+  margin:2%;
+  padding:2%;
+  border: 2px solid var(--greenturquoise70);
+  background-color:var(--greenturquoise50);
+}
+.gallery img {
+  width:100%;
+  border:1px solid var(--greenturquoise70);
+}
+.gallery figcaption {
+  display:block;
+  padding:1%;
+  margin: 2%;
+  text-align: left;
+}
+
+
+
+/*.gallery {}
+
+
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {} */
+
+
+
+@keyframes App-logo {} 
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
